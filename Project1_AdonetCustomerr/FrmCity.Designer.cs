@@ -1,6 +1,6 @@
 ﻿namespace Project1_AdonetCustomerr
 {
-    partial class Form1
+    partial class FrmCity
     {
         /// <summary>
         /// Required designer variable.
@@ -128,6 +128,7 @@
             this.btnCreate.TabIndex = 10;
             this.btnCreate.Text = "Əlavə et";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnUpdate
             // 
@@ -138,6 +139,7 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Güncəllə";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -148,6 +150,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
@@ -158,13 +161,14 @@
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "Axtar";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // Form1
+            // FrmCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1243, 587);
+            this.ClientSize = new System.Drawing.Size(1226, 501);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
@@ -177,7 +181,8 @@
             this.Controls.Add(this.txtCityİd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnList);
-            this.Name = "Form1";
+            this.Name = "FrmCity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "City Process Formm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
