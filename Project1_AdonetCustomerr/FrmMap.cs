@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Project1_AdonetCustomerr
 {
@@ -19,8 +20,8 @@ namespace Project1_AdonetCustomerr
 
         private void btnOpenCityForm_Click(object sender, EventArgs e)
         {
-            FrmCity frmCity = new FrmCity();    
-            frmCity.Show();   
+            FrmCity frmCity = new FrmCity();
+            frmCity.Show();
         }
 
         private void btnOpenCustomerForm_Click(object sender, EventArgs e)
@@ -38,5 +39,6 @@ namespace Project1_AdonetCustomerr
         {
             Application.Exit();
         }
+       
     }
 }

@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textCategorId = new System.Windows.Forms.TextBox();
+            this.txtCategorId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textCategorName = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -61,12 +61,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(906, 480);
             this.dataGridView1.TabIndex = 2;
             // 
-            // textCategorId
+            // txtCategorId
             // 
-            this.textCategorId.Location = new System.Drawing.Point(138, 38);
-            this.textCategorId.Name = "textCategorId";
-            this.textCategorId.Size = new System.Drawing.Size(182, 22);
-            this.textCategorId.TabIndex = 3;
+            this.txtCategorId.Location = new System.Drawing.Point(138, 38);
+            this.txtCategorId.Name = "txtCategorId";
+            this.txtCategorId.Size = new System.Drawing.Size(182, 22);
+            this.txtCategorId.TabIndex = 3;
+            this.txtCategorId.TextChanged += new System.EventHandler(this.textCategorId_TextChanged);
             // 
             // label2
             // 
@@ -93,6 +94,7 @@
             this.btnCreate.TabIndex = 33;
             this.btnCreate.Text = "Əlavə et";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnDelete
             // 
@@ -103,6 +105,7 @@
             this.btnDelete.TabIndex = 34;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -113,6 +116,7 @@
             this.btnUpdate.TabIndex = 35;
             this.btnUpdate.Text = "Güncəllə";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSearch
             // 
@@ -133,6 +137,7 @@
             this.btnList.TabIndex = 37;
             this.btnList.Text = "Çeşidlə";
             this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // FrmCategory
             // 
@@ -146,11 +151,12 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.textCategorName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textCategorId);
+            this.Controls.Add(this.txtCategorId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "FrmCategory";
             this.Text = "Kategori Islemleri";
+            this.Load += new System.EventHandler(this.FrmCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,7 +167,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textCategorId;
+        private System.Windows.Forms.TextBox txtCategorId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textCategorName;
         private System.Windows.Forms.Button btnCreate;
