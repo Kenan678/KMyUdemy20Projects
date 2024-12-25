@@ -125,7 +125,7 @@ namespace Project2_EntityFrameworkDbFirstProduct
                 .ToList();
             dataGridView1 .DataSource = values;
 
-           i
+           ig
         }
     }
 }
