@@ -32,7 +32,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCategorId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textCategorName = new System.Windows.Forms.TextBox();
+            this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -78,12 +78,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Kategoriya Adı:";
             // 
-            // textCategorName
+            // txtCategoryName
             // 
-            this.textCategorName.Location = new System.Drawing.Point(138, 73);
-            this.textCategorName.Name = "textCategorName";
-            this.textCategorName.Size = new System.Drawing.Size(182, 22);
-            this.textCategorName.TabIndex = 5;
+            this.txtCategoryName.Location = new System.Drawing.Point(138, 73);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(182, 22);
+            this.txtCategoryName.TabIndex = 5;
             // 
             // btnCreate
             // 
@@ -127,6 +127,7 @@
             this.btnSearch.TabIndex = 36;
             this.btnSearch.Text = "Axtar";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnList
             // 
@@ -149,7 +150,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.textCategorName);
+            this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCategorId);
             this.Controls.Add(this.dataGridView1);
@@ -169,7 +170,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtCategorId;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textCategorName;
+        private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;

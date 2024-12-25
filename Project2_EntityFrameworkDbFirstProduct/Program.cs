@@ -16,7 +16,7 @@ namespace Project2_EntityFrameworkDbFirstProduct
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCategory());
+            Application.Run(new FrmProduct());
         }
     }
 }

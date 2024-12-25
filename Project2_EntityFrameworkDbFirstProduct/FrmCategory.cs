@@ -36,7 +36,7 @@ namespace Project2_EntityFrameworkDbFirstProduct
         private void btnCreate_Click(object sender, EventArgs e)
         {
             TblCategory tblCategory = new TblCategory();    
-            tblCategory.CategoryName=tblCategory.CategoryName;  
+            tblCategory.CategoryName=txtCategoryName.Text;  
             db.TblCategories.Add(tblCategory);  
             db.SaveChanges();
         }
@@ -59,6 +59,17 @@ namespace Project2_EntityFrameworkDbFirstProduct
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtCategorId.Text);
+            var value = db.TblCategories.Find(id);
+            value.CategoryName = txtCategoryName.Text;
+            db.SaveChanges();
+            CategoryList();
+           
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtCategorId.Text);
+
         }
     }
 }
