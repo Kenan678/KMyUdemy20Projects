@@ -24,7 +24,8 @@ namespace Project2_EntityFrameworkDbFirstProduct
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            var values = db.TblProducts.Where(x => x.ProductName == txtProductName.Text).ToList();
+            dataGridView1.DataSource = values;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -102,6 +103,29 @@ namespace Project2_EntityFrameworkDbFirstProduct
             cmbProductCategory.DisplayMember = "CategoryName";
             cmbProductCategory.ValueMember = "CategoryId";
             cmbProductCategory.DataSource = values;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var values = db.TblProducts.
+                Join(db.TblCategories,
+                product=>product.CategoryId,
+                category => category.CategoryId,
+                (product,category)=>new
+                {
+                    ProductId = product.ProductId,
+                    ProductName = product.ProductName,
+                    ProductPrice = product.ProductPrice,
+                    ProductStock = product.ProductStock,
+                    CategoryId = category.CategoryId,
+                    CategoryName = category.CategoryName,
+
+
+                }  )
+                .ToList();
+            dataGridView1 .DataSource = values;
+
+           
         }
     }
 }

@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbProductCategory = new System.Windows.Forms.ComboBox();
+            this.btnProductListWithCategory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.btnList.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnList.Location = new System.Drawing.Point(94, 234);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(285, 41);
+            this.btnList.Size = new System.Drawing.Size(137, 41);
             this.btnList.TabIndex = 47;
             this.btnList.Text = "Çeşidlə";
             this.btnList.UseVisualStyleBackColor = false;
@@ -132,7 +133,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(445, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(445, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -200,11 +201,23 @@
             this.cmbProductCategory.TabIndex = 53;
             this.cmbProductCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // btnProductListWithCategory
+            // 
+            this.btnProductListWithCategory.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProductListWithCategory.Location = new System.Drawing.Point(253, 234);
+            this.btnProductListWithCategory.Name = "btnProductListWithCategory";
+            this.btnProductListWithCategory.Size = new System.Drawing.Size(126, 41);
+            this.btnProductListWithCategory.TabIndex = 54;
+            this.btnProductListWithCategory.Text = "Çeşidlə";
+            this.btnProductListWithCategory.UseVisualStyleBackColor = false;
+            this.btnProductListWithCategory.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 558);
+            this.Controls.Add(this.btnProductListWithCategory);
             this.Controls.Add(this.cmbProductCategory);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtProductStock);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbProductCategory;
+        private System.Windows.Forms.Button btnProductListWithCategory;
     }
 }
