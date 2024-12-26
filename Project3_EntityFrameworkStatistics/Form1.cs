@@ -17,8 +17,11 @@ namespace Project3_EntityFrameworkStatistics
             InitializeComponent();
         }
 
+        Db3Project20Entities db = new Db3Project20Entities();
         private void Form1_Load(object sender, EventArgs e)
         {
+            int categoryCount = db.TblCategories.Count();
+            lblCategoryCount.Text = categoryCount.ToString();
 
         }
     }

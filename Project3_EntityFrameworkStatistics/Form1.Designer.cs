@@ -332,7 +332,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(241)))), ((int)(((byte)(244)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(180)))), ((int)(((byte)(219)))));
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Location = new System.Drawing.Point(1145, 174);
