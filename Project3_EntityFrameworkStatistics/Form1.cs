@@ -35,13 +35,10 @@ namespace Project3_EntityFrameworkStatistics
             lblOrderCount.Text = orderCount.ToString();
 
             var totalProductStockCount = db.TblProducts.Sum(x=>x.ProductStock);
-            lblProductTotalStock.Text = totalProductStockCount.ToString();  
+            lblProductTotalStock.Text = totalProductStockCount.ToString();
 
-            var  avarageProductPrice =db.TblProducts.Average(x=>x.ProductPrice);
-            lblProductAvaragePrice.Text=avarageProductPrice.ToString();
-           
-
-
+            var avarageProductPrice = db.TblProducts.Average(x => x.ProductPrice);
+            lblProductAvaragePrice.Text = ((int)avarageProductPrice).ToString();
 
             var totalProductCountByCategoryIsFurit = db.TblProducts.Where(x=>x.CategoryId==1).Sum(y=>y.ProductStock);
             lblProductTotalFruitCount.Text=totalProductCountByCategoryIsFurit.ToString();
