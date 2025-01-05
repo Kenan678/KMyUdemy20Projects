@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,8 +43,23 @@ namespace Project3_EntityFrameworkStatistics
 
             var totalProductCountByCategoryIsFurit = db.TblProducts.Where(x=>x.CategoryId==1).Sum(y=>y.ProductStock);
             lblProductTotalFruitCount.Text=totalProductCountByCategoryIsFurit.ToString();
+            //sprite umumi
+            var totalStockBySprite = db.TblProducts.Where(x => x.ProductName == "Sprite").Select(y=>y.ProductStock).FirstOrDefault();
+            var totalPriceSprite = db.TblProducts.Where(x=>x.ProductName =="Sprite").Select(y =>y.ProductPrice).FirstOrDefault();
+            var totalPriceBySpriteforTotalStock = totalStockBySprite * totalPriceSprite;
+            lblTotalPriceBySprite.Text = totalPriceBySpriteforTotalStock.ToString();
+            //product stock <100
+            var productStocksmaller100 = db.TblProducts.Where(x => x.ProductStock < 100).Count();
+            lblProductStockSmaller100.Text=productStocksmaller100.ToString();
+
+            // kategoro goy ve status true
+             var productGoyAndStausTrue = db.TblProducts.Where(x=>x.CategoryId==2 &&
+             x.ProductStatus==true).Sum(y=>y.ProductStock);
+            lblgoy.Text=productGoyAndStausTrue.ToString();
 
 
+            
+           
         }
 
         private void label37_Click(object sender, EventArgs e)
