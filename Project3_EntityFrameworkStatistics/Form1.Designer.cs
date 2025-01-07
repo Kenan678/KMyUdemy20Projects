@@ -86,7 +86,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lblOrderCountFromTurkey = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -357,7 +357,7 @@
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(71, 20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 28);
+            this.label14.Size = new System.Drawing.Size(104, 22);
             this.label14.TabIndex = 2;
             this.label14.Text = "Goy status true";
             // 
@@ -726,32 +726,32 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(85)))), ((int)(((byte)(12)))));
-            this.panel15.Controls.Add(this.label29);
+            this.panel15.Controls.Add(this.lblOrderCountFromTurkey);
             this.panel15.Controls.Add(this.label30);
             this.panel15.Location = new System.Drawing.Point(45, 324);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(239, 128);
             this.panel15.TabIndex = 9;
             // 
-            // label29
+            // lblOrderCountFromTurkey
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(94, 62);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 25);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "label29";
+            this.lblOrderCountFromTurkey.AutoSize = true;
+            this.lblOrderCountFromTurkey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderCountFromTurkey.Location = new System.Drawing.Point(94, 62);
+            this.lblOrderCountFromTurkey.Name = "lblOrderCountFromTurkey";
+            this.lblOrderCountFromTurkey.Size = new System.Drawing.Size(82, 25);
+            this.lblOrderCountFromTurkey.TabIndex = 1;
+            this.lblOrderCountFromTurkey.Text = "label29";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(71, 20);
+            this.label30.Location = new System.Drawing.Point(40, 20);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(106, 22);
+            this.label30.Size = new System.Drawing.Size(182, 22);
             this.label30.TabIndex = 2;
-            this.label30.Text = "Kategoriya sayi";
+            this.label30.Text = "Turkiyeden Edilen Sifarisler";
             // 
             // panel21
             // 
@@ -1190,7 +1190,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lblOrderCountFromTurkey;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label31;
