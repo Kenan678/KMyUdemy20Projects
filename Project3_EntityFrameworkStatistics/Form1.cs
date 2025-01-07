@@ -56,6 +56,9 @@ namespace Project3_EntityFrameworkStatistics
              var productGoyAndStausTrue = db.TblProducts.Where(x=>x.CategoryId==2 &&
              x.ProductStatus==true).Sum(y=>y.ProductStock);
             lblgoy.Text=productGoyAndStausTrue.ToString();
+            //turkiyeden edilen sifarisler
+            var  customerId=db.TblCustomers.Where(x=>x.CustomerCountry=="Azerbaycan").Select(y=>y.CustomerID).ToList();
+            lblOrderCountFromTurkey.Text=customerId.ToString();
 
 
             
