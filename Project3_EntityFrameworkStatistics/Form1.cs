@@ -56,10 +56,12 @@ namespace Project3_EntityFrameworkStatistics
             var productGoyAndStausTrue = db.TblProducts.Where(x => x.CategoryId == 2 &&
             x.ProductStatus == true).Sum(y => y.ProductStock);
             lblgoy.Text = productGoyAndStausTrue.ToString();
-            //turkiyeden edilen sifarisler
-            var customerId = db.TblCustomers.Where(x => x.CustomerCountry == "Azerbaycan").Select(y => y.CustomerID).ToList();
-            lblOrderCountFromTurkey.Text = customerId.ToString();
+            //Azerbeycannan edilen sifarisler
 
+            var customerId = db.Database.SqlQuery<int>("select count(*) from TblOrder where CustomerId in\r\n(select CustomerID " +
+               "from TblCustomer where CustomerCountry='Azerbaycan')").FirstOrDefault();
+
+            lblOrderCountFromTurkey.Text = customerId.ToString();
 
         }
 
