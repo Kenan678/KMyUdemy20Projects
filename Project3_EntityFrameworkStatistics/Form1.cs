@@ -61,8 +61,6 @@ namespace Project3_EntityFrameworkStatistics
             lblOrderCountFromTurkey.Text = customerId.ToString();
 
 
-
-
         }
 
         private void label37_Click(object sender, EventArgs e)
