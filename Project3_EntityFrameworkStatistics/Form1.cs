@@ -62,6 +62,9 @@ namespace Project3_EntityFrameworkStatistics
                "from TblCustomer where CustomerCountry='Azerbaycan')").FirstOrDefault();
 
             lblOrderCountFromTurkey.Text = customerId.ToString();
+            //Turkiyeden edilen sifarisler
+            var Customer2Id=db.TblCustomers.Where(x=>x.)
+
 
         }
 

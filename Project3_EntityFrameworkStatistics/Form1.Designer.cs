@@ -80,7 +80,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblOrderByTurkey = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
@@ -666,32 +666,32 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(182)))), ((int)(((byte)(34)))));
-            this.panel13.Controls.Add(this.label25);
+            this.panel13.Controls.Add(this.lblOrderByTurkey);
             this.panel13.Controls.Add(this.label26);
             this.panel13.Location = new System.Drawing.Point(318, 324);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(239, 128);
             this.panel13.TabIndex = 11;
             // 
-            // label25
+            // lblOrderByTurkey
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(97, 62);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(82, 25);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "label25";
+            this.lblOrderByTurkey.AutoSize = true;
+            this.lblOrderByTurkey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderByTurkey.Location = new System.Drawing.Point(97, 62);
+            this.lblOrderByTurkey.Name = "lblOrderByTurkey";
+            this.lblOrderByTurkey.Size = new System.Drawing.Size(82, 25);
+            this.lblOrderByTurkey.TabIndex = 1;
+            this.lblOrderByTurkey.Text = "label25";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(71, 20);
+            this.label26.Location = new System.Drawing.Point(28, 20);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(106, 22);
+            this.label26.Size = new System.Drawing.Size(179, 22);
             this.label26.TabIndex = 2;
-            this.label26.Text = "Kategoriya sayi";
+            this.label26.Text = "Turkiyeden edilen sifarisler";
             // 
             // panel14
             // 
@@ -747,11 +747,11 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(40, 20);
+            this.label30.Location = new System.Drawing.Point(15, 20);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(182, 22);
+            this.label30.Size = new System.Drawing.Size(210, 22);
             this.label30.TabIndex = 2;
-            this.label30.Text = "Turkiyeden Edilen Sifarisler";
+            this.label30.Text = "Azerbaycandan Edilen Sifarisler";
             // 
             // panel21
             // 
@@ -1184,7 +1184,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblOrderByTurkey;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label27;
