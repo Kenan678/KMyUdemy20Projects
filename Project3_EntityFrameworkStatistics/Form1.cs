@@ -17,7 +17,7 @@ namespace Project3_EntityFrameworkStatistics
         {
             InitializeComponent();
         }
-     
+
 
         Db3Project20Entities db = new Db3Project20Entities();
         private void Form1_Load(object sender, EventArgs e)
@@ -35,34 +35,34 @@ namespace Project3_EntityFrameworkStatistics
             int orderCount = db.TblOrders.Count();
             lblOrderCount.Text = orderCount.ToString();
 
-            var totalProductStockCount = db.TblProducts.Sum(x=>x.ProductStock);
+            var totalProductStockCount = db.TblProducts.Sum(x => x.ProductStock);
             lblProductTotalStock.Text = totalProductStockCount.ToString();
 
             var avarageProductPrice = db.TblProducts.Average(x => x.ProductPrice);
             lblProductAvaragePrice.Text = ((int)avarageProductPrice).ToString();
 
-            var totalProductCountByCategoryIsFurit = db.TblProducts.Where(x=>x.CategoryId==1).Sum(y=>y.ProductStock);
-            lblProductTotalFruitCount.Text=totalProductCountByCategoryIsFurit.ToString();
+            var totalProductCountByCategoryIsFurit = db.TblProducts.Where(x => x.CategoryId == 1).Sum(y => y.ProductStock);
+            lblProductTotalFruitCount.Text = totalProductCountByCategoryIsFurit.ToString();
             //sprite umumi
-            var totalStockBySprite = db.TblProducts.Where(x => x.ProductName == "Sprite").Select(y=>y.ProductStock).FirstOrDefault();
-            var totalPriceSprite = db.TblProducts.Where(x=>x.ProductName =="Sprite").Select(y =>y.ProductPrice).FirstOrDefault();
+            var totalStockBySprite = db.TblProducts.Where(x => x.ProductName == "Sprite").Select(y => y.ProductStock).FirstOrDefault();
+            var totalPriceSprite = db.TblProducts.Where(x => x.ProductName == "Sprite").Select(y => y.ProductPrice).FirstOrDefault();
             var totalPriceBySpriteforTotalStock = totalStockBySprite * totalPriceSprite;
             lblTotalPriceBySprite.Text = totalPriceBySpriteforTotalStock.ToString();
             //product stock <100
             var productStocksmaller100 = db.TblProducts.Where(x => x.ProductStock < 100).Count();
-            lblProductStockSmaller100.Text=productStocksmaller100.ToString();
+            lblProductStockSmaller100.Text = productStocksmaller100.ToString();
 
             // kategoro goy ve status true
-             var productGoyAndStausTrue = db.TblProducts.Where(x=>x.CategoryId==2 &&
-             x.ProductStatus==true).Sum(y=>y.ProductStock);
-            lblgoy.Text=productGoyAndStausTrue.ToString();
+            var productGoyAndStausTrue = db.TblProducts.Where(x => x.CategoryId == 2 &&
+            x.ProductStatus == true).Sum(y => y.ProductStock);
+            lblgoy.Text = productGoyAndStausTrue.ToString();
             //turkiyeden edilen sifarisler
-            var  customerId=db.TblCustomers.Where(x=>x.CustomerCountry=="Azerbaycan").Select(y=>y.CustomerID).ToList();
-            lblOrderCountFromTurkey.Text=customerId.ToString();
+            var customerId = db.TblCustomers.Where(x => x.CustomerCountry == "Azerbaycan").Select(y => y.CustomerID).ToList();
+            lblOrderCountFromTurkey.Text = customerId.ToString();
 
 
-            
-           
+
+
         }
 
         private void label37_Click(object sender, EventArgs e)
