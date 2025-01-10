@@ -63,7 +63,8 @@ namespace Project3_EntityFrameworkStatistics
 
             lblOrderCountFromTurkey.Text = customerId.ToString();
             //Turkiyeden edilen sifarisler
-            var Customer2Id=db.TblCustomers.Where(x=>x.)
+            var Customer2Id=db.TblCustomers.Where(x=>x.CustomerCountry=="Turkiye").Select(y => y.CustomerID).ToList();
+            lblOrderByTurkey.Text = Customer2Id.ToString();
 
 
         }
@@ -79,6 +80,11 @@ namespace Project3_EntityFrameworkStatistics
         }
 
         private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
         {
 
         }

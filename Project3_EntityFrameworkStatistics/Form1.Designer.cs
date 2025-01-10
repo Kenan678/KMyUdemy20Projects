@@ -747,11 +747,12 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(15, 20);
+            this.label30.Location = new System.Drawing.Point(25, 20);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(210, 22);
             this.label30.TabIndex = 2;
             this.label30.Text = "Azerbaycandan Edilen Sifarisler";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // panel21
             // 
