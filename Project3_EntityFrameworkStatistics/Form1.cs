@@ -64,7 +64,8 @@ namespace Project3_EntityFrameworkStatistics
             lblOrderCountFromTurkey.Text = customerId.ToString();
             //Turkiyeden edilen sifarisler
             var Customer2Id=db.TblCustomers.Where(x=>x.CustomerCountry=="Turkiye").Select(y => y.CustomerID).ToList();
-            lblOrderByTurkey.Text = Customer2Id.ToString();
+            var orderCountfromTurkey = db.TblOrders.Count(z => Customer2Id.Contains(z.CustomerId.Value));
+            lblOrderByTurkey.Text = orderCountfromTurkey.ToString();
 
 
         }
