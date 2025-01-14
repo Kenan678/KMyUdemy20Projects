@@ -66,6 +66,10 @@ namespace Project3_EntityFrameworkStatistics
             var Customer2Id = db.TblCustomers.Where(x => x.CustomerCountry == "Turkiye").Select(y => y.CustomerID).ToList();
             var orderCountfromTurkey = db.TblOrders.Count(z => Customer2Id.Contains(z.CustomerId.Value));
             lblOrderByTurkey.Text = orderCountfromTurkey.ToString();
+            //Meyvelerden elde edilen gelir
+            var allFruitPrice =db.TblCategories.Where(x=>x.CategoryName=="Meyve").Select(y => y.CategoryId).ToList();  
+            
+
 
 
         }
@@ -86,6 +90,11 @@ namespace Project3_EntityFrameworkStatistics
         }
 
         private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAllFruitPrice_Click(object sender, EventArgs e)
         {
 
         }
