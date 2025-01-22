@@ -110,7 +110,7 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.label55 = new System.Windows.Forms.Label();
+            this.lblAcitveProductCount = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
             this.label57 = new System.Windows.Forms.Label();
@@ -969,22 +969,22 @@
             // panel28
             // 
             this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(133)))), ((int)(((byte)(175)))));
-            this.panel28.Controls.Add(this.label55);
+            this.panel28.Controls.Add(this.lblAcitveProductCount);
             this.panel28.Controls.Add(this.label56);
             this.panel28.Location = new System.Drawing.Point(318, 476);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(239, 128);
             this.panel28.TabIndex = 21;
             // 
-            // label55
+            // lblAcitveProductCount
             // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(109, 62);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(82, 25);
-            this.label55.TabIndex = 1;
-            this.label55.Text = "label55";
+            this.lblAcitveProductCount.AutoSize = true;
+            this.lblAcitveProductCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcitveProductCount.Location = new System.Drawing.Point(109, 62);
+            this.lblAcitveProductCount.Name = "lblAcitveProductCount";
+            this.lblAcitveProductCount.Size = new System.Drawing.Size(82, 25);
+            this.lblAcitveProductCount.TabIndex = 1;
+            this.lblAcitveProductCount.Text = "label55";
             // 
             // label56
             // 
@@ -992,9 +992,9 @@
             this.label56.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(71, 20);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(106, 22);
+            this.label56.Size = new System.Drawing.Size(122, 22);
             this.label56.TabIndex = 2;
-            this.label56.Text = "Kategoriya sayi";
+            this.label56.Text = "Aktiv Pradukt Sayı";
             // 
             // panel29
             // 
@@ -1232,7 +1232,7 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label lblAcitveProductCount;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Label label57;
