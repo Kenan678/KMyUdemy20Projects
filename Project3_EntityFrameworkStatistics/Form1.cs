@@ -67,8 +67,34 @@ namespace Project3_EntityFrameworkStatistics
             var orderCountfromTurkey = db.TblOrders.Count(z => Customer2Id.Contains(z.CustomerId.Value));
             lblOrderByTurkey.Text = orderCountfromTurkey.ToString();
             //Meyvelerden elde edilen gelir
-            var allFruitPrice =db.TblCategories.Where(x=>x.CategoryName=="Meyve").Select(y => y.CategoryId).ToList();  
-            
+            // Meyveler için kategori ID'lerini al
+            var allFruitPrice = db.TblCategories
+                .Where(x => x.CategoryName == "Meyve")
+                .Select(y => y.CategoryId)
+                .ToList();
+
+            // Meyve kategorisindeki ürünleri al
+            var fruitProducts = db.TblProducts
+                .Where(x => x.CategoryId.HasValue && allFruitPrice.Contains(x.CategoryId.Value))
+                .ToList();
+
+            // fruitProducts'tan ProductId'leri al
+            var fruitProductIds = fruitProducts.Select(x => x.ProductId).ToList();
+
+            // Meyve ürünlerinden elde edilen toplam geliri hesapla
+            var totalFruitRevenue = db.TblOrders
+                .Where(order => order.ProductId.HasValue && fruitProductIds.Contains(order.ProductId.Value))
+                .Sum(order => (order.Count ?? 0) * (order.UnitPrice ?? 0)); // Null kontrolü ekledik
+
+            // Meyve ürünlerinin isimlerini virgülle ayırarak al
+            var fruitProductNames = string.Join(", ", fruitProducts.Select(p => p.ProductName));
+
+            // Meyve ürünlerinin isimlerini ve toplam geliri ekranda göster
+            lblAllFruitPrice.Text = $"{totalFruitRevenue.ToString("C")}";
+
+
+
+
 
 
 
