@@ -102,7 +102,7 @@ namespace Project3_EntityFrameworkStatistics
             var firstProductCategoryName=db.TblCategories.Where(z=>z.CategoryId==firstProductCategoryId).Select(d=>d.CategoryName).FirstOrDefault();  
             lblFirstProductCategoryName.Text = firstProductCategoryName.ToString();
 
-                
+             // 
         }
 
         private void label37_Click(object sender, EventArgs e)
