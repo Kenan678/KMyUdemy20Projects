@@ -67,37 +67,42 @@ namespace Project3_EntityFrameworkStatistics
             var orderCountfromTurkey = db.TblOrders.Count(z => Customer2Id.Contains(z.CustomerId.Value));
             lblOrderByTurkey.Text = orderCountfromTurkey.ToString();
             //Meyvelerden elde edilen gelir
-            // Meyveler için kategori ID'lerini al
+
             var allFruitPrice = db.TblCategories
                 .Where(x => x.CategoryName == "Meyve")
                 .Select(y => y.CategoryId)
                 .ToList();
 
-            // Meyve kategorisindeki ürünleri al
             var fruitProducts = db.TblProducts
                 .Where(x => x.CategoryId.HasValue && allFruitPrice.Contains(x.CategoryId.Value))
                 .ToList();
 
-            // fruitProducts'tan ProductId'leri al
             var fruitProductIds = fruitProducts.Select(x => x.ProductId).ToList();
 
-            // Meyve ürünlerinden elde edilen toplam geliri hesapla
             var totalFruitRevenue = db.TblOrders
                 .Where(order => order.ProductId.HasValue && fruitProductIds.Contains(order.ProductId.Value))
-                .Sum(order => (order.Count ?? 0) * (order.UnitPrice ?? 0)); // Null kontrolü ekledik
-
-            // Meyve ürünlerinin isimlerini virgülle ayırarak al
+                .Sum(order => (order.Count ?? 0) * (order.UnitPrice ?? 0));
             var fruitProductNames = string.Join(", ", fruitProducts.Select(p => p.ProductName));
 
-            // Meyve ürünlerinin isimlerini ve toplam geliri ekranda göster
             lblAllFruitPrice.Text = $"{totalFruitRevenue.ToString("C")}";
 
 
+            //en son elave olunan product
+
+            var lastProductName=db.TblProducts.OrderByDescending(x => x.ProductId). Select (y => y.ProductName).FirstOrDefault();
+            lblEndOfProduct.Text= lastProductName.ToString();
+
+            // Id si 5 olan  product
+            var IDis5Product=db.TblProducts.Where(x=>x.ProductId==5).Select(y=>y.ProductName).FirstOrDefault();
+            lblIdEqual5.Text = IDis5Product.ToString();
 
 
+            // ilk elave olunanin kategoriyasi
+            var firstProductCategoryId=db.TblProducts.OrderBy(x=>x.ProductId).Select(y =>y.CategoryId).FirstOrDefault();
+            var firstProductCategoryName=db.TblCategories.Where(z=>z.CategoryId==firstProductCategoryId).Select(d=>d.CategoryName).FirstOrDefault();  
+            lblFirstProductCategoryName.Text = firstProductCategoryName.ToString();
 
-
-
+                
         }
 
         private void label37_Click(object sender, EventArgs e)
@@ -121,6 +126,11 @@ namespace Project3_EntityFrameworkStatistics
         }
 
         private void lblAllFruitPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
         {
 
         }
