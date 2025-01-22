@@ -107,7 +107,7 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.label53 = new System.Windows.Forms.Label();
+            this.lblCountryDiffrenetCount = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.lblAcitveProductCount = new System.Windows.Forms.Label();
@@ -939,22 +939,22 @@
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(115)))));
-            this.panel27.Controls.Add(this.label53);
+            this.panel27.Controls.Add(this.lblCountryDiffrenetCount);
             this.panel27.Controls.Add(this.label54);
             this.panel27.Location = new System.Drawing.Point(1145, 476);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(239, 128);
             this.panel27.TabIndex = 23;
             // 
-            // label53
+            // lblCountryDiffrenetCount
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(106, 62);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(82, 25);
-            this.label53.TabIndex = 1;
-            this.label53.Text = "label53";
+            this.lblCountryDiffrenetCount.AutoSize = true;
+            this.lblCountryDiffrenetCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountryDiffrenetCount.Location = new System.Drawing.Point(106, 62);
+            this.lblCountryDiffrenetCount.Name = "lblCountryDiffrenetCount";
+            this.lblCountryDiffrenetCount.Size = new System.Drawing.Size(82, 25);
+            this.lblCountryDiffrenetCount.TabIndex = 1;
+            this.lblCountryDiffrenetCount.Text = "label53";
             // 
             // label54
             // 
@@ -962,9 +962,9 @@
             this.label54.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(71, 20);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(106, 22);
+            this.label54.Size = new System.Drawing.Size(85, 22);
             this.label54.TabIndex = 2;
-            this.label54.Text = "Kategoriya sayi";
+            this.label54.Text = "Ölkə saylari";
             // 
             // panel28
             // 
@@ -1229,7 +1229,7 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label lblCountryDiffrenetCount;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Label lblAcitveProductCount;

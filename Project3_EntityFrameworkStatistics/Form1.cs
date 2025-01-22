@@ -107,12 +107,15 @@ namespace Project3_EntityFrameworkStatistics
             lblAcitveProductCount.Text = activeProductCount.ToString();
 
             //Stockdaki kola  amountu
-            var totalColaStockAmount=db.TblProducts.Where(x=>x.ProductName=="Kola").Select(z=>z.ProductPrice * z.ProductStock).Sum();
-            lblTotalPriceWithStockCola.Text=totalColaStockAmount.ToString();
+            var totalColaStockAmount = db.TblProducts.Where(x => x.ProductName == "Kola").Select(z => z.ProductPrice * z.ProductStock).Sum();
+            lblTotalPriceWithStockCola.Text = totalColaStockAmount.ToString();
             //son  sifaris veren musteri adi
-            var lastCustomerId=db.TblOrders.OrderByDescending(x=>x.CustomerId).Select(z=>z.CustomerId).FirstOrDefault();
-            var lastOrderCustomerName=db.TblCustomers.Where(x=>x.CustomerID==lastCustomerId).Select(z=>z.CustomerName).FirstOrDefault();
-            lblLastCustomerName.Text=lastOrderCustomerName.ToString();
+            var lastCustomerId = db.TblOrders.OrderByDescending(x => x.CustomerId).Select(z => z.CustomerId).FirstOrDefault();
+            var lastOrderCustomerName = db.TblCustomers.Where(x => x.CustomerID == lastCustomerId).Select(z => z.CustomerName).FirstOrDefault();
+            lblLastCustomerName.Text = lastOrderCustomerName.ToString();
+            //nece ferqli olkeden musteri var
+            var countryDiffrenetCount = db.TblCustomers.Select(x => x.CustomerCountry).Distinct().Count();
+            lblCountryDiffrenetCount.Text = countryDiffrenetCount.ToString();
 
         }
 
