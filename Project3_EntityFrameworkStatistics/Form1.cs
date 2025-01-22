@@ -89,22 +89,26 @@ namespace Project3_EntityFrameworkStatistics
 
             //en son elave olunan product
 
-            var lastProductName=db.TblProducts.OrderByDescending(x => x.ProductId). Select (y => y.ProductName).FirstOrDefault();
-            lblEndOfProduct.Text= lastProductName.ToString();
+            var lastProductName = db.TblProducts.OrderByDescending(x => x.ProductId).Select(y => y.ProductName).FirstOrDefault();
+            lblEndOfProduct.Text = lastProductName.ToString();
 
             // Id si 5 olan  product
-            var IDis5Product=db.TblProducts.Where(x=>x.ProductId==5).Select(y=>y.ProductName).FirstOrDefault();
+            var IDis5Product = db.TblProducts.Where(x => x.ProductId == 5).Select(y => y.ProductName).FirstOrDefault();
             lblIdEqual5.Text = IDis5Product.ToString();
 
 
             // ilk elave olunanin kategoriyasi
-            var firstProductCategoryId=db.TblProducts.OrderBy(x=>x.ProductId).Select(y =>y.CategoryId).FirstOrDefault();
-            var firstProductCategoryName=db.TblCategories.Where(z=>z.CategoryId==firstProductCategoryId).Select(d=>d.CategoryName).FirstOrDefault();  
+            var firstProductCategoryId = db.TblProducts.OrderBy(x => x.ProductId).Select(y => y.CategoryId).FirstOrDefault();
+            var firstProductCategoryName = db.TblCategories.Where(z => z.CategoryId == firstProductCategoryId).Select(d => d.CategoryName).FirstOrDefault();
             lblFirstProductCategoryName.Text = firstProductCategoryName.ToString();
 
-             // Aktiv Product sayi
-             var activeProductCount = db.TblProducts.Where(x=>x.ProductStatus== true).Count();
-            lblAcitveProductCount.Text = activeProductCount.ToString(); 
+            // Aktiv Product sayi
+            var activeProductCount = db.TblProducts.Where(x => x.ProductStatus == true).Count();
+            lblAcitveProductCount.Text = activeProductCount.ToString();
+
+            //Stockdaki kola  amountu
+            var totalColaStockAmount=db.TblProducts.Where(x=>x.ProductName=="Kola").Select(z=>z.ProductPrice * z.ProductStock).Sum();
+            lblTotalPriceWithStockCola.Text=totalColaStockAmount.ToString();
         }
 
         private void label37_Click(object sender, EventArgs e)

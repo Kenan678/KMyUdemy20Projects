@@ -113,7 +113,7 @@
             this.lblAcitveProductCount = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.label57 = new System.Windows.Forms.Label();
+            this.lblTotalPriceWithStockCola = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.lblFirstProductCategoryName = new System.Windows.Forms.Label();
@@ -999,22 +999,22 @@
             // panel29
             // 
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(68)))), ((int)(((byte)(114)))));
-            this.panel29.Controls.Add(this.label57);
+            this.panel29.Controls.Add(this.lblTotalPriceWithStockCola);
             this.panel29.Controls.Add(this.label58);
             this.panel29.Location = new System.Drawing.Point(595, 476);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(239, 128);
             this.panel29.TabIndex = 20;
             // 
-            // label57
+            // lblTotalPriceWithStockCola
             // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(95, 62);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(82, 25);
-            this.label57.TabIndex = 1;
-            this.label57.Text = "label57";
+            this.lblTotalPriceWithStockCola.AutoSize = true;
+            this.lblTotalPriceWithStockCola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPriceWithStockCola.Location = new System.Drawing.Point(95, 62);
+            this.lblTotalPriceWithStockCola.Name = "lblTotalPriceWithStockCola";
+            this.lblTotalPriceWithStockCola.Size = new System.Drawing.Size(82, 25);
+            this.lblTotalPriceWithStockCola.TabIndex = 1;
+            this.lblTotalPriceWithStockCola.Text = "label57";
             // 
             // label58
             // 
@@ -1022,9 +1022,9 @@
             this.label58.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.Location = new System.Drawing.Point(71, 20);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(106, 22);
+            this.label58.Size = new System.Drawing.Size(144, 22);
             this.label58.TabIndex = 2;
-            this.label58.Text = "Kategoriya sayi";
+            this.label58.Text = "Toplam Kola qazanci";
             // 
             // panel30
             // 
@@ -1235,7 +1235,7 @@
         private System.Windows.Forms.Label lblAcitveProductCount;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label lblTotalPriceWithStockCola;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label lblFirstProductCategoryName;
