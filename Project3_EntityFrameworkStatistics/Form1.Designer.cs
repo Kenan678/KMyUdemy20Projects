@@ -99,7 +99,7 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.label47 = new System.Windows.Forms.Label();
+            this.lblLastCustomerName = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
@@ -860,22 +860,22 @@
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(224)))), ((int)(((byte)(229)))));
-            this.panel25.Controls.Add(this.label47);
+            this.panel25.Controls.Add(this.lblLastCustomerName);
             this.panel25.Controls.Add(this.label48);
             this.panel25.Location = new System.Drawing.Point(0, 0);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(239, 128);
             this.panel25.TabIndex = 15;
             // 
-            // label47
+            // lblLastCustomerName
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(94, 62);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(82, 25);
-            this.label47.TabIndex = 1;
-            this.label47.Text = "label47";
+            this.lblLastCustomerName.AutoSize = true;
+            this.lblLastCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastCustomerName.Location = new System.Drawing.Point(94, 62);
+            this.lblLastCustomerName.Name = "lblLastCustomerName";
+            this.lblLastCustomerName.Size = new System.Drawing.Size(82, 25);
+            this.lblLastCustomerName.TabIndex = 1;
+            this.lblLastCustomerName.Text = "label47";
             // 
             // label48
             // 
@@ -883,9 +883,9 @@
             this.label48.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.Location = new System.Drawing.Point(71, 20);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(106, 22);
+            this.label48.Size = new System.Drawing.Size(110, 22);
             this.label48.TabIndex = 2;
-            this.label48.Text = "Kategoriya sayi";
+            this.label48.Text = "Son Musteri Adı";
             // 
             // panel26
             // 
@@ -1221,7 +1221,7 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label lblLastCustomerName;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label49;

@@ -109,6 +109,11 @@ namespace Project3_EntityFrameworkStatistics
             //Stockdaki kola  amountu
             var totalColaStockAmount=db.TblProducts.Where(x=>x.ProductName=="Kola").Select(z=>z.ProductPrice * z.ProductStock).Sum();
             lblTotalPriceWithStockCola.Text=totalColaStockAmount.ToString();
+            //son  sifaris veren musteri adi
+            var lastCustomerId=db.TblOrders.OrderByDescending(x=>x.CustomerId).Select(z=>z.CustomerId).FirstOrDefault();
+            var lastOrderCustomerName=db.TblCustomers.Where(x=>x.CustomerID==lastCustomerId).Select(z=>z.CustomerName).FirstOrDefault();
+            lblLastCustomerName.Text=lastOrderCustomerName.ToString();
+
         }
 
         private void label37_Click(object sender, EventArgs e)
