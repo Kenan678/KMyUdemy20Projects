@@ -116,6 +116,7 @@ namespace Project3_EntityFrameworkStatistics
             //nece ferqli olkeden musteri var
             var countryDiffrenetCount = db.TblCustomers.Select(x => x.CustomerCountry).Distinct().Count();
             lblCountryDiffrenetCount.Text = countryDiffrenetCount.ToString();
+             
 
         }
 
