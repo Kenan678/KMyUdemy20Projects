@@ -52,9 +52,6 @@ namespace Project4_EntityFrameworkCodeFirstMovie
             value.CategoryName = txtCategoryName.Text;
             context.SaveChanges();
             MessageBox.Show("Successful");
-
-
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
