@@ -19,7 +19,7 @@ namespace Project4_EntityFrameworkCodeFirstMovie
         {
             InitializeComponent();
         }
-        MovieContext context=new MovieContext();
+        MovieContext context = new MovieContext();
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -32,17 +32,29 @@ namespace Project4_EntityFrameworkCodeFirstMovie
 
         private void btnList_Click(object sender, EventArgs e)
         {
-             var values =context.Categories.ToList();
+            var values = context.Categories.ToList();
             dataGridView1.DataSource = values;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           Category category = new Category();
-            category.CategoryName=txtCategoryName.Text;
-            context.Categories.Add(category);   
+            Category category = new Category();
+            category.CategoryName = txtCategoryName.Text;
+            context.Categories.Add(category);
             context.SaveChanges();
             MessageBox.Show("Successful");
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtCategoryId.Text);
+            var value = context.Categories.Find(id);
+            value.CategoryName = txtCategoryName.Text;
+            context.SaveChanges();
+            MessageBox.Show("Successful");
+
+
+
         }
     }
 }
