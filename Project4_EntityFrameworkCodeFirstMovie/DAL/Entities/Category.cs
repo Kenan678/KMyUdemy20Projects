@@ -10,6 +10,6 @@ namespace Project4_EntityFrameworkCodeFirstMovie.DAL.Entities
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public int MyProperty { get; set; }
+        public List<Movie> Movies { get; set; }
     }
 }
