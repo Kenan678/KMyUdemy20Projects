@@ -59,9 +59,16 @@ namespace Project4_EntityFrameworkCodeFirstMovie
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id =int.Parse(txtCategoryId.Text);
+            int id = int.Parse(txtCategoryId.Text);
             var values = context.Categories.Find(id);
             context.Categories.Remove(values);
+            MessageBox.Show("Successful");
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var values = context.Categories.Where(x => x.CategoryName == txtCategoryName.Text).ToList();
+            dataGridView1.DataSource = values;
 
         }
     }
