@@ -56,5 +56,13 @@ namespace Project4_EntityFrameworkCodeFirstMovie
 
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id =int.Parse(txtCategoryId.Text);
+            var values = context.Categories.Find(id);
+            context.Categories.Remove(values);
+
+        }
     }
 }
