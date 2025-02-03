@@ -17,5 +17,6 @@ namespace Project4_EntityFrameworkCodeFirstMovie.DAL.Entities
         public int CategoryId { get; set; }
         public  virtual Category Category { get; set; }  
 
+
     }
 }
