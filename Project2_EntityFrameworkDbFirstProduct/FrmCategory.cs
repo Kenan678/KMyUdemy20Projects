@@ -71,5 +71,10 @@ namespace Project2_EntityFrameworkDbFirstProduct
             int id = Convert.ToInt32(txtCategorId.Text);
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
