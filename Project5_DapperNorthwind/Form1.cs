@@ -16,5 +16,10 @@ namespace Project5_DapperNorthwind
         {
             InitializeComponent();
         }
+
+        private   void btnCategoryList_Click(object sender, EventArgs e)
+        {
+            string query =""
+        }
     }
 }
