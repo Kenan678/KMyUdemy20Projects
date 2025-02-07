@@ -7,6 +7,6 @@ namespace Project6_ApiWeather.Properties.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(server "rdgyjyj
-        }
+        }yj
     }
 }
