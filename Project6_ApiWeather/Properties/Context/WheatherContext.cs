@@ -13,4 +13,5 @@ namespace Project6_ApiWeather.Properties.Context
         }
         public DbSet<City> Cities { get; set; }
     }
+
 }
