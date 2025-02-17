@@ -11,8 +11,8 @@ using Project6_ApiWeather.Properties.Context;
 namespace Project6_ApiWeather.Migrations
 {
     [DbContext(typeof(WheatherContext))]
-    [Migration("20250213072528_mig1")]
-    partial class mig1
+    [Migration("20250217084329_mig5")]
+    partial class mig5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
