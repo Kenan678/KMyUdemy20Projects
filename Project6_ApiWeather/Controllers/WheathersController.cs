@@ -38,6 +38,7 @@ namespace Project6_ApiWeather.Controllers
             updatedCity.CityName = city.CityName;
             updatedCity.Country = city.Country;
             updatedCity.Detail = city.Detail;
+            updatedCity.Temp=city.Temp;
             context.SaveChanges();
             return Ok("seher gucellendi");
 
