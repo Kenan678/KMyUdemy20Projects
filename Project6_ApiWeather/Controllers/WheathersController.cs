@@ -26,10 +26,21 @@ namespace Project6_ApiWeather.Controllers
         [HttpDelete]
         public IActionResult DeleteWeatherCity(int id)
         {
-            var  values=context.Cities.Where(x=>x.CityId==id).ToList();
+            var values = context.Cities.Where(x => x.CityId == id).ToList();
             context.Cities.RemoveRange(values);
             context.SaveChanges();
             return Ok("seher silindi");
+        }
+        [HttpPut]
+        public IActionResult UpdateWeatherCity(City city)
+        {
+            var updatedCity = context.Cities.Find(city.CityId);
+            updatedCity.CityName = city.CityName;
+            updatedCity.Country = city.Country;
+            updatedCity.Detail = city.Detail;
+            context.SaveChanges();
+            return Ok("seher gucellendi");
+
         }
     }
 }
