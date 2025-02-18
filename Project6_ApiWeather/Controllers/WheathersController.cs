@@ -9,7 +9,7 @@ namespace Project6_ApiWeather.Controllers
     [ApiController]
     public class WheathersController : ControllerBase
     {
-        WheatherContext context=new WheatherContext();
+        WheatherContext context = new WheatherContext();
         [HttpGet]
         public IActionResult WeatherCityList()
         {
@@ -22,6 +22,14 @@ namespace Project6_ApiWeather.Controllers
             context.Cities.Add(city);
             context.SaveChanges();
             return Ok("Seher elave edildi");
+        }
+        [HttpDelete]
+        public IActionResult DeleteWeatherCity(int id)
+        {
+            var  values=context.Cities.Where(x=>x.CityId==id).ToList();
+            context.Cities.RemoveRange(values);
+            context.SaveChanges();
+            return Ok("seher silindi");
         }
     }
 }
