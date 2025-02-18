@@ -38,10 +38,16 @@ namespace Project6_ApiWeather.Controllers
             updatedCity.CityName = city.CityName;
             updatedCity.Country = city.Country;
             updatedCity.Detail = city.Detail;
-            updatedCity.Temp=city.Temp;
+            updatedCity.Temp = city.Temp;
             context.SaveChanges();
             return Ok("seher gucellendi");
 
+        }
+        [HttpGet("GetByIdWeatherCity")]
+        public IActionResult GetByIdWeatherCity(int id)
+        {
+            var value = context.Cities.Find(id);
+            return Ok(value);
         }
     }
 }
