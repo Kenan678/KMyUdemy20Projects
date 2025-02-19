@@ -7,7 +7,7 @@ Console.WriteLine();
 Console.WriteLine("#### Select the Things ####");
 Console.WriteLine();
 Console.WriteLine("1-Get The City List ");
-Console.WriteLine("2-Add The New City");
+Console.WriteLine("2-City and Weather Tempurature List");
 Console.WriteLine("3-Delete The City ");
 Console.WriteLine("4-Update The City ");
 Console.WriteLine("5-Get By Id to City");
@@ -36,8 +36,20 @@ if (number == "1")
 }
 if (number == "2")
 {
-https://localhost:7063/api/Wheathers
-    Console.WriteLine(" New City Added side:");
+
+    string url = "https://localhost:7063/api/Wheathers";
+    using(HttpClient client = new HttpClient()) {
+        HttpResponseMessage response=await client.GetAsync(url);
+        string responseBody = await response.Content.ReadAsStringAsync();
+        JArray jArray = JArray.Parse(responseBody);
+        foreach(var item in jArray)
+        {
+            string cityName = item["cityName"].ToString();
+            string temp = item["temp"].ToString();
+            Console.WriteLine($"{cityName} {temp}");
+
+
+            Console.WriteLine(" New City Added side:");
 }
 if (number == "3")
 {
