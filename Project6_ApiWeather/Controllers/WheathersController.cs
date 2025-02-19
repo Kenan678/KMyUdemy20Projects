@@ -64,9 +64,7 @@ namespace Project6_ApiWeather.Controllers
             var value = context.Cities.Count();
             return Ok("Toplam  " + value + " seher ");
 
-
         }
-
 
         [HttpGet("MaxtempCityName")]
         public IActionResult MaxtempCityName()
@@ -74,6 +72,7 @@ namespace Project6_ApiWeather.Controllers
             var value = context.Cities.OrderByDescending(x => x.Temp).Select(y => y.CityName).FirstOrDefault();
             return Ok(value);
         }
+
         [HttpGet("MintempCityName")]
         public IActionResult MintempCityName()
         {
