@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Project6_ApiWeather.Dtos;
 using Project6_ApiWeather.Properties.Context;
 using Project6_ApiWeather.Properties.Entities;
 
@@ -17,8 +18,15 @@ namespace Project6_ApiWeather.Controllers
             return Ok(values);
         }
         [HttpPost]
-        public IActionResult CreateWeatherCity(City city)
+        public IActionResult CreateWeatherCity([FromBody] CityCreateDto cityeDto)
         {
+            var city = new City
+            {
+                CityName = cityeDto.CityName,
+                Country = cityeDto.Country,
+                Temp=cityeDto.Temp,
+                Detail = cityeDto.Detail
+            };
             context.Cities.Add(city);
             context.SaveChanges();
             return Ok("Seher elave edildi");
@@ -48,6 +56,14 @@ namespace Project6_ApiWeather.Controllers
         {
             var value = context.Cities.Find(id);
             return Ok(value);
+        }
+        [HttpGet("GetByAllCityCount")]
+        public IActionResult GetByAllCityCount()
+        {
+            var value = context.Cities.Count();
+            return Ok("Toplam  " + value +  " seher ");
+
+
         }
     }
 }
