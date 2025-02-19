@@ -71,7 +71,13 @@ namespace Project6_ApiWeather.Controllers
         [HttpGet("MaxtempCityName")]
         public IActionResult MaxtempCityName()
         {
-            var value = context.Cities.OrderByDescending(x=>x.Temp).Select(y=>y.CityName).FirstOrDefault();  
+            var value = context.Cities.OrderByDescending(x => x.Temp).Select(y => y.CityName).FirstOrDefault();
+            return Ok(value);
+        }
+        [HttpGet("MintempCityName")]
+        public IActionResult MintempCityName()
+        {
+            var value = context.Cities.OrderBy(x => x.Temp).Select(y => y.CityName).FirstOrDefault();
             return Ok(value);
         }
     }
