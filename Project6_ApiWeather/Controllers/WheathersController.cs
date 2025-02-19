@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Project6_ApiWeather.Dtos;
 using Project6_ApiWeather.Properties.Context;
 using Project6_ApiWeather.Properties.Entities;
+using System.Linq;
 
 namespace Project6_ApiWeather.Controllers
 {
@@ -24,7 +25,7 @@ namespace Project6_ApiWeather.Controllers
             {
                 CityName = cityeDto.CityName,
                 Country = cityeDto.Country,
-                Temp=cityeDto.Temp,
+                Temp = cityeDto.Temp,
                 Detail = cityeDto.Detail
             };
             context.Cities.Add(city);
@@ -61,9 +62,17 @@ namespace Project6_ApiWeather.Controllers
         public IActionResult GetByAllCityCount()
         {
             var value = context.Cities.Count();
-            return Ok("Toplam  " + value +  " seher ");
+            return Ok("Toplam  " + value + " seher ");
 
 
+        }
+
+
+        [HttpGet("MaxtempCityName")]
+        public IActionResult MaxtempCityName()
+        {
+            var value = context.Cities.OrderByDescending(x=>x.Temp).Select(y=>y.CityName).FirstOrDefault();  
+            return Ok(value);
         }
     }
 }
