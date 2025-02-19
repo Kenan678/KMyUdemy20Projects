@@ -38,25 +38,28 @@ if (number == "2")
 {
 
     string url = "https://localhost:7063/api/Wheathers";
-    using(HttpClient client = new HttpClient()) {
-        HttpResponseMessage response=await client.GetAsync(url);
+    using (HttpClient client = new HttpClient())
+    {
+        HttpResponseMessage response = await client.GetAsync(url);
         string responseBody = await response.Content.ReadAsStringAsync();
         JArray jArray = JArray.Parse(responseBody);
-        foreach(var item in jArray)
+        foreach (var item in jArray)
         {
             string cityName = item["cityName"].ToString();
             string temp = item["temp"].ToString();
             Console.WriteLine($"{cityName} {temp}");
 
 
-            Console.WriteLine(" New City Added side:");
+
+        }
+        if (number == "3")
+        {
+        https://localhost:7063/api/Wheathers
+            Console.WriteLine("City Deleted side :");
+        }
+        Console.Read();
+    }
 }
-if (number == "3")
-{
-https://localhost:7063/api/Wheathers
-    Console.WriteLine("City Deleted side :");
-}
-Console.Read();
 
 
 
