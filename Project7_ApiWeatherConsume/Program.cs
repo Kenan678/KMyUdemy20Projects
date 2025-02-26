@@ -58,10 +58,11 @@ if (number == "2")
 }
 if (number == "3")
 {
+    Console.Write("Seher adi:");
     string url = "https://localhost:7063/api/Wheathers";
     var newWeatherCity = new
     {
-
+       
     }
 
 }
