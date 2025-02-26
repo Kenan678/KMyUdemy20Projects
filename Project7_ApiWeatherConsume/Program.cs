@@ -126,6 +126,23 @@ if (number == "5")
         response.EnsureSuccessStatusCode();
     }
 }
+if (number == "6")
+{
+    string url = "https://localhost:7063/api/Wheathers/GetByIdWeatherCity?id=";
+    int id = int.Parse(Console.ReadLine());
+    using (HttpClient client = new HttpClient())
+    {
+        HttpResponseMessage response = await client.GetAsync(url + id);
+        response.EnsureSuccessStatusCode();
+        string responseBody = await response.Content.ReadAsStringAsync();
+        JObject weatherCityObject = JObject.Parse(responseBody);
+        string cityName = weatherCityObject["cityName"].ToString();
+        string detail = weatherCityObject["detail"].ToString();
+        string country = weatherCityObject["country"].ToString();
+        decimal temp =Decimal.Parse( weatherCityObject["temp"].ToString());
+        Console.WriteLine( "seher: "+cityName+" olke: " +country+" detay: "+detail+" tempratur: "+temp);
+    }
+}
 
 Console.Read();
 
