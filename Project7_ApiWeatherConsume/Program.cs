@@ -1,5 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Globalization;
+using System.Text;
 using System.Text.Json.Nodes;
 using System.Xml;
 
@@ -55,31 +57,36 @@ if (number == "2")
 
         }
     }
-    
+
 }
 if (number == "3")
 {
-    string citynName, country, detail;
+    string cityName, country, detail;
     decimal temp;
     Console.Write("Seher adi:");
-    citynName = Console.ReadLine();
+    cityName = Console.ReadLine();
     Console.Write("Olke adi:");
     country = Console.ReadLine();
     Console.Write("Hava durumu deatyi:");
     detail = Console.ReadLine();
     Console.Write("Tempratur:");
-    temp= decimal.Parse(Console.ReadLine());
-
+    temp = decimal.Parse(Console.ReadLine());
     string url = "https://localhost:7063/api/Wheathers";
     var newWeatherCity = new
     {
-       
+        CityName = cityName,
+        Country = country,
+        Detail = detail,
+        Temp = temp
+    };
+    using (HttpClient client = new HttpClient())
+    {
+        string json = JsonConvert.SerializeObject(newWeatherCity);
+        StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+        HttpResponseMessage response = await client.PostAsync(url, content);
+        response.EnsureSuccessStatusCode();
     }
-
+    Console.Read();
 }
-Console.Read();
-   
-
-
 
 
