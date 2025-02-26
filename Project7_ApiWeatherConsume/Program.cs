@@ -93,5 +93,39 @@ if (number == "4")
 
     }
 }
+if (number == "5")
+{
+    string url = "https://localhost:7063/api/Wheathers?id=";
+    string cityName, country, detail;
+    decimal temp;
+    int cityId;
+
+    Console.Write("Seher adi:");
+    cityName = Console.ReadLine();
+    Console.Write("Olke adi:");
+    country = Console.ReadLine();
+    Console.Write("Hava durumu deatyi:");
+    detail = Console.ReadLine();
+    Console.Write("Tempratur:");
+    temp = decimal.Parse(Console.ReadLine());
+    Console.Write("Seher Id:");
+    cityId = int.Parse(Console.ReadLine());
+    var UpdatedWeatherCity = new
+    {
+        CityId = cityId,
+        CityName = cityName,
+        Country = country,
+        Detail = detail,
+        Temp = temp
+    };
+    using (HttpClient client = new HttpClient())
+    {
+        string json = JsonConvert.SerializeObject(UpdatedWeatherCity);
+        StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+        HttpResponseMessage response = await client.PutAsync(url, content);
+        response.EnsureSuccessStatusCode();
+    }
+}
+
 Console.Read();
 
