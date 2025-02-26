@@ -34,9 +34,6 @@ if (number == "1")
             Console.WriteLine($"City:{cityName}");
         }
     }
-
-
-
 }
 if (number == "2")
 {
@@ -52,9 +49,6 @@ if (number == "2")
             string cityName = item["cityName"].ToString();
             string temp = item["temp"].ToString();
             Console.WriteLine($"{cityName} {temp}");
-
-
-
         }
     }
 
@@ -86,7 +80,18 @@ if (number == "3")
         HttpResponseMessage response = await client.PostAsync(url, content);
         response.EnsureSuccessStatusCode();
     }
-    Console.Read();
-}
 
+}
+if (number == "4")
+{
+    string url = "https://localhost:7063/api/Wheathers?id=";
+    Console.WriteLine("Silmek istediyiniz Id yazin");
+    int id = int.Parse(Console.ReadLine());
+    using (HttpClient client=new HttpClient()) {
+        HttpResponseMessage response= await client.DeleteAsync(url+id);
+        response.EnsureSuccessStatusCode();
+
+    }
+}
+Console.Read();
 
