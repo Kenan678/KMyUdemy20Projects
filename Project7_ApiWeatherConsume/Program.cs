@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using System.Globalization;
 using System.Text.Json.Nodes;
 using System.Xml;
 
@@ -58,7 +59,17 @@ if (number == "2")
 }
 if (number == "3")
 {
+    string citynName, country, detail;
+    decimal temp;
     Console.Write("Seher adi:");
+    citynName = Console.ReadLine();
+    Console.Write("Olke adi:");
+    country = Console.ReadLine();
+    Console.Write("Hava durumu deatyi:");
+    detail = Console.ReadLine();
+    Console.Write("Tempratur:");
+    temp= decimal.Parse(Console.ReadLine());
+
     string url = "https://localhost:7063/api/Wheathers";
     var newWeatherCity = new
     {
