@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblEuroAlis = new System.Windows.Forms.Label();
-            this.lblDollarAlis = new System.Windows.Forms.Label();
-            this.lblEuroSatis = new System.Windows.Forms.Label();
-            this.lblDollarSatis = new System.Windows.Forms.Label();
+            this.lblDollar = new System.Windows.Forms.Label();
+            this.lblEuro = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -42,41 +40,23 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lblEuroAlis
+            // lblDollar
             // 
-            this.lblEuroAlis.AutoSize = true;
-            this.lblEuroAlis.Location = new System.Drawing.Point(288, 66);
-            this.lblEuroAlis.Name = "lblEuroAlis";
-            this.lblEuroAlis.Size = new System.Drawing.Size(44, 16);
-            this.lblEuroAlis.TabIndex = 0;
-            this.lblEuroAlis.Text = "label1";
+            this.lblDollar.AutoSize = true;
+            this.lblDollar.Location = new System.Drawing.Point(78, 84);
+            this.lblDollar.Name = "lblDollar";
+            this.lblDollar.Size = new System.Drawing.Size(44, 16);
+            this.lblDollar.TabIndex = 0;
+            this.lblDollar.Text = "label1";
             // 
-            // lblDollarAlis
+            // lblEuro
             // 
-            this.lblDollarAlis.AutoSize = true;
-            this.lblDollarAlis.Location = new System.Drawing.Point(111, 66);
-            this.lblDollarAlis.Name = "lblDollarAlis";
-            this.lblDollarAlis.Size = new System.Drawing.Size(44, 16);
-            this.lblDollarAlis.TabIndex = 1;
-            this.lblDollarAlis.Text = "label2";
-            // 
-            // lblEuroSatis
-            // 
-            this.lblEuroSatis.AutoSize = true;
-            this.lblEuroSatis.Location = new System.Drawing.Point(288, 111);
-            this.lblEuroSatis.Name = "lblEuroSatis";
-            this.lblEuroSatis.Size = new System.Drawing.Size(44, 16);
-            this.lblEuroSatis.TabIndex = 2;
-            this.lblEuroSatis.Text = "label3";
-            // 
-            // lblDollarSatis
-            // 
-            this.lblDollarSatis.AutoSize = true;
-            this.lblDollarSatis.Location = new System.Drawing.Point(111, 111);
-            this.lblDollarSatis.Name = "lblDollarSatis";
-            this.lblDollarSatis.Size = new System.Drawing.Size(44, 16);
-            this.lblDollarSatis.TabIndex = 3;
-            this.lblDollarSatis.Text = "label4";
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.Location = new System.Drawing.Point(269, 84);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(44, 16);
+            this.lblEuro.TabIndex = 2;
+            this.lblEuro.Text = "label3";
             // 
             // textBox1
             // 
@@ -165,12 +145,11 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblDollarSatis);
-            this.Controls.Add(this.lblEuroSatis);
-            this.Controls.Add(this.lblDollarAlis);
-            this.Controls.Add(this.lblEuroAlis);
+            this.Controls.Add(this.lblEuro);
+            this.Controls.Add(this.lblDollar);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,10 +157,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblEuroAlis;
-        private System.Windows.Forms.Label lblDollarAlis;
-        private System.Windows.Forms.Label lblEuroSatis;
-        private System.Windows.Forms.Label lblDollarSatis;
+        private System.Windows.Forms.Label lblDollar;
+        private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
