@@ -102,7 +102,7 @@ namespace Project8_RapidApiCurrency
         private void button1_Click(object sender, EventArgs e)
         {
             decimal unitPrice = decimal.Parse(txtBrimPrice.Text);
-            
+
             decimal totalPrice = 0;
 
             if (rdbDollar.Checked)
