@@ -94,6 +94,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmLoginn";
             this.Text = "Giris ekrani";
+            this.Load += new System.EventHandler(this.FrmLoginn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

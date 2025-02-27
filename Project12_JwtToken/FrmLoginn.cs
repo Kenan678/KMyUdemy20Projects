@@ -16,5 +16,10 @@ namespace Project12_JwtToken
         {
             InitializeComponent();
         }
+
+        private void FrmLoginn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
