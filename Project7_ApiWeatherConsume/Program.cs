@@ -51,7 +51,6 @@ if (number == "2")
             Console.WriteLine($"{cityName} {temp}");
         }
     }
-
 }
 if (number == "3")
 {
@@ -87,8 +86,9 @@ if (number == "4")
     string url = "https://localhost:7063/api/Wheathers?id=";
     Console.WriteLine("Silmek istediyiniz Id yazin");
     int id = int.Parse(Console.ReadLine());
-    using (HttpClient client=new HttpClient()) {
-        HttpResponseMessage response= await client.DeleteAsync(url+id);
+    using (HttpClient client = new HttpClient())
+    {
+        HttpResponseMessage response = await client.DeleteAsync(url + id);
         response.EnsureSuccessStatusCode();
 
     }
@@ -139,8 +139,8 @@ if (number == "6")
         string cityName = weatherCityObject["cityName"].ToString();
         string detail = weatherCityObject["detail"].ToString();
         string country = weatherCityObject["country"].ToString();
-        decimal temp =Decimal.Parse( weatherCityObject["temp"].ToString());
-        Console.WriteLine( "seher: "+cityName+" olke: " +country+" detay: "+detail+" tempratur: "+temp);
+        decimal temp = Decimal.Parse(weatherCityObject["temp"].ToString());
+        Console.WriteLine("seher: " + cityName + " olke: " + country + " detay: " + detail + " tempratur: " + temp);
     }
 }
 
