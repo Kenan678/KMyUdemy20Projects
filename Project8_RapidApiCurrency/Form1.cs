@@ -41,7 +41,30 @@ namespace Project8_RapidApiCurrency
                 var value = json["result"].ToString();
                 lblDollar.Text = value;
                // Console.WriteLine(body);
+               //Euro
             }
+            var client2 = new HttpClient();
+            var request2 = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=EUR&to=try&amount=1"),
+                Headers =
+    {
+        { "x-rapidapi-key", "935f21a3camshea1457b5fa0dbd2p1599c3jsnee7df83a5909" },
+        { "x-rapidapi-host", "currency-conversion-and-exchange-rates.p.rapidapi.com" },
+    },
+            };
+            using (var response2 = await client2.SendAsync(request2))
+            {
+                response2.EnsureSuccessStatusCode();
+                var body2 = await response2.Content.ReadAsStringAsync();
+                var json2 = JObject.Parse(body2);
+                var value2 = json2["result"].ToString();
+                lblEuro.Text = value2;
+                // Console.WriteLine(body);
+            }
+
+
         }
     }
 }
