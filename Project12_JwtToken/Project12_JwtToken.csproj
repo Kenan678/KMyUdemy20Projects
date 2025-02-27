@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLoginn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginn.Designer.cs">
+      <DependentUpon>FrmLoginn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEmployee.Designer.cs">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTokenGenerator.cs">
       <SubType>Form</SubType>
@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmLoginn.resx">
+      <DependentUpon>FrmLoginn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
