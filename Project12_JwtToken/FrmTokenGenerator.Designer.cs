@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCreateToken = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // txtPassword
+            // txtName
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(144, 65);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(501, 28);
-            this.txtPassword.TabIndex = 10;
-            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(144, 65);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(501, 28);
+            this.txtName.TabIndex = 10;
+            this.txtName.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -59,18 +59,18 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Adı:";
             // 
-            // btnLogin
+            // btnCreateToken
             // 
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(181, 192);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(450, 54);
-            this.btnLogin.TabIndex = 8;
-            this.btnLogin.Text = "Token Yarat";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnCreateToken.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCreateToken.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnCreateToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateToken.Location = new System.Drawing.Point(181, 192);
+            this.btnCreateToken.Name = "btnCreateToken";
+            this.btnCreateToken.Size = new System.Drawing.Size(450, 54);
+            this.btnCreateToken.TabIndex = 8;
+            this.btnCreateToken.Text = "Token Yarat";
+            this.btnCreateToken.UseVisualStyleBackColor = true;
+            this.btnCreateToken.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUserName
             // 
@@ -91,14 +91,14 @@
             this.label1.Text = "Istifadəçi Adı:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(501, 28);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(144, 132);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(501, 28);
+            this.txtEmail.TabIndex = 14;
+            this.txtEmail.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -110,13 +110,13 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Email:";
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(144, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(501, 28);
-            this.textBox2.TabIndex = 12;
+            this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.Location = new System.Drawing.Point(144, 98);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(501, 28);
+            this.txtSurname.TabIndex = 12;
             // 
             // label4
             // 
@@ -143,17 +143,18 @@
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnCreateToken);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
             this.Name = "FrmTokenGenerator";
             this.Text = "FrmTokenGenerator";
+            this.Load += new System.EventHandler(this.FrmTokenGenerator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,14 +162,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnCreateToken;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }

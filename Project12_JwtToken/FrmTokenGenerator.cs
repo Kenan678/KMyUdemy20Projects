@@ -15,8 +15,8 @@ namespace Project12_JwtToken
         public FrmTokenGenerator()
         {
             InitializeComponent();
-            btnLogin.MouseEnter += new EventHandler(btnLogin_MouseEnter);
-            btnLogin.MouseLeave += new EventHandler(btnLogin_MouseLeave);
+            btnCreateToken.MouseEnter += new EventHandler(btnLogin_MouseEnter);
+            btnCreateToken.MouseLeave += new EventHandler(btnLogin_MouseLeave);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,12 +30,17 @@ namespace Project12_JwtToken
         }
         private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
-            btnLogin.BackColor = Color.Red;
+            btnCreateToken.BackColor = Color.Red;
 
         }
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
-            btnLogin.BackColor = Color.White; 
+            btnCreateToken.BackColor = Color.White; 
+        }
+
+        private void FrmTokenGenerator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
