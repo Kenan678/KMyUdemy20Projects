@@ -21,5 +21,10 @@ namespace Project12_JwtToken
         {
 
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
