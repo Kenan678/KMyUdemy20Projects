@@ -151,6 +151,11 @@ namespace Project1_AdonetCustomerr
             dataGridView1.DataSource = dataTable;
             sqlConnection.Close();
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

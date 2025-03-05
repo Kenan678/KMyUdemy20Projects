@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Project12_JwtToken
 {
-    public partial class FrmEmployee : Form
+    public partial class Form1 : Form
     {
-        public FrmEmployee()
+        public Form1()
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-             
-        } 
-    } 
+    }
 }
