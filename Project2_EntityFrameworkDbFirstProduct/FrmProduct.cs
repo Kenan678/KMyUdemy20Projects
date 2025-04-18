@@ -28,6 +28,7 @@ namespace Project2_EntityFrameworkDbFirstProduct
             dataGridView1.DataSource = values;
         }
 
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             var value = db.TblProducts.Find(int.Parse(txtProductId.Text));
@@ -109,9 +110,9 @@ namespace Project2_EntityFrameworkDbFirstProduct
         {
             var values = db.TblProducts.
                 Join(db.TblCategories,
-                product=>product.CategoryId,
+                product => product.CategoryId,
                 category => category.CategoryId,
-                (product,category)=>new
+                (product, category) => new
                 {
                     ProductId = product.ProductId,
                     ProductName = product.ProductName,
@@ -120,12 +121,9 @@ namespace Project2_EntityFrameworkDbFirstProduct
                     CategoryId = category.CategoryId,
                     CategoryName = category.CategoryName,
 
-
-                }  )
+                })
                 .ToList();
-            dataGridView1 .DataSource = values;
-
-          
+            dataGridView1.DataSource = values;
         }
     }
 }
